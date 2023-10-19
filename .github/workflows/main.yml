@@ -10,16 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set Payload
-        id: set-payload
-        run: echo '{"key1": "value1", "key2": "value2"}'
-
       - name: Trigger Dispatch Event
         uses: peter-evans/repository-dispatch@v1
         with:
           token: ${{ secrets.DISPATCH_REPO_TOKEN }}
           repository: dispatch_repo
           event-type: my-custom-event
-          client-payload: ${{ steps.set-payload.outputs.payload }}
-
-
+          client-payload: '{"key1": "value1", "key2": "value2"}'
