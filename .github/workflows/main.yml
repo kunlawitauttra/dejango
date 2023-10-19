@@ -19,9 +19,4 @@ jobs:
           token: ${{ secrets.DISPATCH_REPO_TOKEN }}
           repository: dispatch_repo
           event-type: my-custom-event
-          client-payload: |
-            {
-              "key1": "value1",
-              "key2": "value2"
-            }
-#
+          client-payload: '{"key1": "value1", "key2": "value2"}'
