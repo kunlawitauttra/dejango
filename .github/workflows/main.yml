@@ -11,7 +11,8 @@ jobs:
 
     steps:
       - name: Set Payload
-        run: echo ::set-output name=payload::'{"key1": "value1", "key2": "value2"}'
+        id: set-payload
+        run: echo '{"key1": "value1", "key2": "value2"}'
 
       - name: Trigger Dispatch Event
         uses: peter-evans/repository-dispatch@v1
@@ -20,4 +21,5 @@ jobs:
           repository: dispatch_repo
           event-type: my-custom-event
           client-payload: ${{ steps.set-payload.outputs.payload }}
+
 
