@@ -1,20 +1,2 @@
-name: Dispatch Event Source
 
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  dispatch:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Trigger Dispatch Event
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          token: ${{ secrets.DISPATCH_REPO_TOKEN }}
-          repository: dispatch_repo
-          event-type: my-custom-event
-          client-payload: '{"key1": "value1", "key2": "value2"}'
 
