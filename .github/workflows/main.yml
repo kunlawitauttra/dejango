@@ -16,7 +16,7 @@ jobs:
           token: ${{ secrets.DISPATCH_REPO_TOKEN }}
           repository: kunlawitauttra/hello-world-composite-action
           event-type: my-custom-event
-          client-payload: '{"key1": "dispatch-value11", "key2": "dispatch-value22"}'
+          client-payload: '{"key1": "dispatch-value1", "key2": "dispatch-value2"}'
 
 
 
