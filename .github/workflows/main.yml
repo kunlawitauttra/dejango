@@ -16,7 +16,7 @@ jobs:
           token: ${{ secrets.DISPATCH_REPO_TOKEN }}
           repository: kunlawitauttra/dispatch_repo
           event-type: my-custom-event
-          client-payload: '{"key1": "value1", "key2": "value2"}'
+          client-payload: '{"key1": "dispatch-value1", "key2": "dispatch-value2"}'
 #
 
 
